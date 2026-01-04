@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, Building2, Smartphone, Brain, CloudOff, Zap, ShieldCheck, MapPin } from "lucide-react"
+import { ArrowRight, Building2, Smartphone, Brain, CloudOff, Zap, ShieldCheck, MapPin, Utensils } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import Link from "next/link"
@@ -296,27 +296,28 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Coming Soon */}
       <section className="py-24 sm:py-[100px] px-6 bg-white dark:bg-[#0f1419]">
         <div className="max-w-[1280px] mx-auto text-center">
           <h2 className="text-3xl sm:text-[36px] font-regular text-gray-900 dark:text-white mb-20">
             The future is spatial
           </h2>
           <motion.div whileHover={{ y: -10 }} className="max-w-2xl mx-auto">
-            <Card className="p-12 border-0 shadow-2xl dark:bg-gray-800/50 rounded-[2.5rem] overflow-hidden">
-              <div className="aspect-square w-32 h-32 bg-gray-100 dark:bg-gray-900 rounded-3xl mx-auto mb-10 flex items-center justify-center">
-                <ShieldCheck className="w-16 h-16 text-tobiira-blue-600/20" />
-              </div>
-              <span className="text-[12px] font-regular text-tobiira-blue-600 uppercase tracking-[0.2em] mb-4 block">
-                TOBIIRA CUBE
-              </span>
-              <h3 className="text-[28px] font-regular text-gray-900 dark:text-white mb-4">
-                In-room service at the press of a button
-              </h3>
-              <div className="inline-block px-4 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-[12px] font-light text-gray-500 mb-0">
-                Coming 2026
-              </div>
-            </Card>
+            <Link href="/lumi">
+              <Card className="p-12 border-0 shadow-2xl dark:bg-gray-800/50 rounded-[2.5rem] overflow-hidden group cursor-pointer">
+                <div className="aspect-square w-32 h-32 bg-gray-100 dark:bg-gray-900 rounded-3xl mx-auto mb-10 flex items-center justify-center group-hover:bg-red-50 dark:group-hover:bg-red-950/20 transition-colors">
+                  <Utensils className="w-16 h-16 text-gray-400 group-hover:text-red-600 transition-colors" />
+                </div>
+                <span className="text-[12px] font-regular text-red-600 uppercase tracking-[0.2em] mb-4 block">
+                  TOBIIRA LUMI
+                </span>
+                <h3 className="text-[28px] font-regular text-gray-900 dark:text-white mb-4">
+                  Restaurant operations at the speed of light
+                </h3>
+                <div className="inline-block px-4 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-[12px] font-light text-gray-500 mb-0">
+                  Coming 2026
+                </div>
+              </Card>
+            </Link>
           </motion.div>
         </div>
       </section>
